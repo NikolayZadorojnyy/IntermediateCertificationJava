@@ -2,40 +2,50 @@ package toy_store;
 
 public class Toy {
 
-    private int id;
+    private String id = "";
     private String name;
-    private int weight;
-    private int amount;
+    private String weight;
+    private String amount;
 
-    public Toy(int id, String name, int weight, int amount) {
+    public Toy(String id, String name, String weight, String amount) {
+        this(name, weight, amount);
         this.id = id;
+    }
+
+    public Toy(String name, String weight, String amount) {
         this.name = name;
         this.weight = weight;
         this.amount = amount;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
         return name;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public int getWeight() {
+    public String getWeight() {
         return weight;
     }
 
-    public void setWeight(int weight) {
+    public void setWeight(String weight) {
         this.weight = weight;
     }
 
-    public int getAmount() {
+    public String getAmount() {
         return amount;
     }
 
+
+
     @Override
     public String toString() {
-        return String.format("ID: %d; name: %s; weight: %d; amount: %d", getId(), getName(), getWeight(), getAmount());
+        return String.format("ID: %s; name: %s; weight: %s; amount: %s", id, name, weight, amount);
     }
 }

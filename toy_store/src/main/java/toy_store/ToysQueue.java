@@ -33,25 +33,3 @@ public class ToysQueue <T extends Toy> implements Iterable <Toy>{
     }
 
 }
-
-// private Toy toy;
-
-// private Queue<Toy> toysQ = new LinkedList<>();
-
-// public void add(Toy toy) {
-// toysQ.add(toy);
-// }
-
-// @Override
-// public Iterator<Toy> iterator() {
-// return toysQ.iterator();
-// }
-
-// @Override
-// public String toString() {
-// StringBuilder sb = new StringBuilder(toy.toString());
-// for (Toy toy : this) {
-// sb.append(toy.toString() + "\n");
-// }
-// return sb.toString();
-// }
