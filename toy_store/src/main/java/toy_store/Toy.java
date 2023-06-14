@@ -7,6 +7,8 @@ public class Toy {
     private String weight;
     private String amount;
 
+
+
     public Toy(String id, String name, String weight, String amount) {
         this(name, weight, amount);
         this.id = id;
@@ -42,6 +44,9 @@ public class Toy {
         return amount;
     }
 
+    public void setAmount(String amount) {
+        this.amount = amount;
+    }
 
 
     @Override
