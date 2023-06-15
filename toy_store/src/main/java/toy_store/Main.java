@@ -1,7 +1,7 @@
 package toy_store;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         View view = new View();
         view.run();
 

@@ -1,9 +1,10 @@
 package toy_store;
 
+// Класс описывает сущность игрушка
 public class Toy {
 
     private String id = "";
-    private String name;
+    private final String name;
     private String weight;
     private String amount;
 
@@ -51,6 +52,6 @@ public class Toy {
 
     @Override
     public String toString() {
-        return String.format("ID: %s; name: %s; weight: %s; amount: %s", id, name, weight, amount);
+        return String.format("ID: %s; Имя: %s; Вес: %s; Количество: %s", id, name, weight, amount);
     }
 }
