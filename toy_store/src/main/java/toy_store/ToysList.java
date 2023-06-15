@@ -9,19 +9,11 @@ public class ToysList<T extends Toy> implements Iterable<Toy> {
 
     List<Toy> toysList = new ArrayList<>();
 
-    public void add(Toy toy) {
-        toysList.add(toy);
-    }
-
-    private int getSize() {
-        int size = toysList.size();
-        return size;
-    }
-
     private void checkList() {
         for (int i = 0; i < toysList.size(); i++) {
             int toyCurrentAmount = Integer.parseInt(toysList.get(i).getAmount());
-            if (toyCurrentAmount > 0) continue;
+            if (toyCurrentAmount > 0)
+                continue;
             else {
                 toysList.remove(i);
             }
@@ -37,7 +29,9 @@ public class ToysList<T extends Toy> implements Iterable<Toy> {
         return total;
     }
 
-
+    public void loadToy(Toy toy) {
+        toysList.add(toy);
+    }
 
     public void getToy() {
         int totalChance = getTotalChance();
@@ -46,12 +40,9 @@ public class ToysList<T extends Toy> implements Iterable<Toy> {
         for (int i = 0; i < toysList.size(); i++) {
             randomChance -= Integer.parseInt(toysList.get(i).getWeight());
             if (randomChance <= 0) {
-                // System.out.printf("Текущее значение стало меньше нуля: %d!!!!\n",
-                // randomChance);
-                // System.out.printf("Выпала игрушка %s", toysList.get(i).getName() );
+                System.out.printf("Вы выиграли %s!\n", toysList.get(i).getName());
                 int amount = Integer.parseInt(toysList.get(i).getAmount()) - 1;
                 toysList.get(i).setAmount(Integer.toString(amount));
-                // System.out.printf("Осталось %s игрушек", toysList.get(i).getAmount());
                 break;
             }
         }
