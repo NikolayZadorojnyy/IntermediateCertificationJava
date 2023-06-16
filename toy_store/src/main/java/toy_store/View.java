@@ -24,7 +24,7 @@ public class View {
                 System.out.println("Такой команды нет! Введите правильную команду.");
             }
             if (com == Commands.EXIT) {
-                System.out.println("Программа завершена!");
+                System.out.println("Шоу закончено. Всем спасибо!");
                 return;
             }
             try {

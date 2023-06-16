@@ -48,8 +48,8 @@ public class ToysList<T extends Toy> implements Iterable<Toy> {
 
                 System.out.printf("Вы выиграли %s!\n", toysList.get(i).getName());
                 int amount = Integer.parseInt(toysList.get(i).getAmount()) - 1;
-                log(i);
                 toysList.get(i).setAmount(Integer.toString(amount));
+                log(i);
                 break;
             }
         }
